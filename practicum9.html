@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Urban Bloom - CSS Animation</title>
+
+    <style>
+        body {
+            background-color: #f5f5dc;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Text flying from left */
+        h1 {
+            color: darkgreen;
+            font-size: 40px;
+            animation: fly 2s ease-in-out;
+        }
+
+        @keyframes fly {
+            from {
+                transform: translateX(-500px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Image hover transition */
+        img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            transition: transform 0.5s ease;
+        }
+
+        img:hover {
+            transform: scale(1.2);
+        }/* Repeating wave animation */
+
+.wave-box {
+    width: 25px;
+    height: 25px;
+    background-color: green;
+    border-radius: 10px;
+    position: relative;
+
+    animation: wave 3s infinite ease-in-out;
+}
+
+@keyframes wave {
+    0% {
+        left: 0;
+        top: 0;
+    }
+
+    25% {
+        left: 100px;
+        top: -50px;
+    }
+
+    50% {
+        left: 200px;
+        top: 0;
+    }
+
+    75% {
+        left: 300px;
+        top: -50px;
+    }
+
+    100% {
+        left: 0;
+        top: 0;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Urban Bloom</h1>
+
+    <h2>Welcome to Smart Gardening!</h2>
+
+    <img src="Urban_Bloom8.jpg" alt="Beautiful Garden">
+
+    <div class="wave-box"></div>
+
+</body>
+</html>
